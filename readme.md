@@ -78,6 +78,9 @@ Default: | `false`
 Desc: | Is add the `ago`/`from now`
 
 
+## use by
+
+- [node-modules-size](https://github.com/chinanf-boy/node-modules-size)
 
 
 ## License
