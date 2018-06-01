@@ -1,6 +1,6 @@
 {
 	"name": "what-time",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "human readable time, just copt ",
 	"license": "MIT",
 	"main": "dist/what-time.js",
