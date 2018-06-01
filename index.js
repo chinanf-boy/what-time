@@ -3,7 +3,10 @@ module.exports = human;
 function human(seconds,isSuffix) {
   if (seconds instanceof Date){
 	  seconds = Math.round((Date.now() - seconds) / 1000);
-  }
+	}
+	if(typeof seconds != 'number'){
+		throw new TypeError("need number , but got" + typeof seconds)
+	}
 
   seconds = Math.abs(seconds);
 
@@ -35,7 +38,14 @@ function human(seconds,isSuffix) {
 	  }
   })
 
-  !result && (result = '0s ')
+	if(seconds){
+		seconds = Math.floor(seconds * 1000)
+		result += `${seconds}ms `
+	}
+
+	if(!result){
+		result = '0s '
+	}
 
   let suffix
   isSuffix && ( suffix = seconds < 0 ? 'from now' : 'ago' )

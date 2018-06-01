@@ -25,7 +25,7 @@ let s = Date.now() // the number is miniseconds
 // something run
 let e = Date.now()
 
-console.log(whatTime(s-e)) // whatTime is seconds , pleace  /1000
+console.log(whatTime(s-e) / 1000) // whatTime is seconds , pleace  /1000
 
 ```
 
@@ -34,14 +34,13 @@ console.log(whatTime(s-e)) // whatTime is seconds , pleace  /1000
 ```js
 const whatTime = require('what-time');
 
+whatTime(1810.999)
 
-whatTime(1810)
+// "30m 10s 999ms "
 
-// "30m 10s "
+whatTime(1810.999,true)
 
-whatTime(1810,true)
-
-//  "30m 10s ago"
+//  "30m 10s 999ms ago"
 
 
 whatTime(1527824212)
@@ -50,6 +49,11 @@ whatTime(1527824212)
 
 whatTime(1527824212,true)
 //"48Y 5M 1W 6d 3h 36m 52s ago"
+
+
+whatTime(new Date(0))
+
+// now() -  Thu Jan 01 1970 08:00:00 GMT+0800 (CST)
 
 ```
 
@@ -62,7 +66,7 @@ whatTime(1527824212,true)
 
 name: | timeNum
 ---------|----------
-Type: | `number`
+Type: | `number\|Date`
 Desc: | time number like Date.now().
 
 #### isSuffix

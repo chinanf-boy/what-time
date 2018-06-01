@@ -1,5 +1,9 @@
 import test from 'ava';
-import m from './index';
+import m from '.';
+
+test.failing('string Error', t => {
+	t.is(m('asdfsdf'), "0s ")
+});
 
 test('0', t => {
 	t.is(m(0), "0s ")
@@ -9,12 +13,20 @@ test('0 time', t => {
 	t.is(m(0,true), "0s ago")
 });
 
-test('60', t => {
-	t.is(m(60), "1m ")
+test('0.243', t => {
+	t.is(m(0.243), "243ms ")
 });
 
-test('60 time', t => {
-	t.is(m(60,true), "1m ago")
+test('0.243 time', t => {
+	t.is(m(0.243,true), "243ms ago")
+});
+
+test('60.999', t => {
+	t.is(m(60.999), "1m 999ms ")
+});
+
+test('60.999 time', t => {
+	t.is(m(60.999,true), "1m 999ms ago")
 });
 
 test('1810', t => {
@@ -55,4 +67,13 @@ test('Date ', t => {
 
 test('Date time', t => {
 	t.is(!!m(new Date(),true), true)
+});
+
+
+test('Date 0', t => {
+	t.is(!!m(new Date()), true)
+});
+
+test('Date 0 time', t => {
+	t.is(!!m(new Date(0),true), true)
 });
