@@ -1,8 +1,7 @@
 # what-time [![Build Status](https://travis-ci.org/chinanf-boy/what-time.svg?branch=master)](https://travis-ci.org/chinanf-boy/what-time) [![codecov](https://codecov.io/gh/chinanf-boy/what-time/badge.svg?branch=master)](https://codecov.io/gh/chinanf-boy/what-time?branch=master)
 
-> human readable time, just copy from https://github.com/bahamas10/human/blob/master/human.js
+> human readable time,  inspire from https://github.com/bahamas10/human/blob/master/human.js
 
-[中文](./readme.md) | ~~[english](./readme.en.md)~~
 
 ## Install
 
@@ -24,31 +23,44 @@ yarn add what-time
 ```js
 const whatTime = require('what-time');
 
-whatTime('unicorns');
-//=> 'unicorns & rainbows'
+
+whatTime(1810)
+
+// "30m 10s "
+
+whatTime(1810,true)
+
+//  "30m 10s ago"
+
+
+whatTime(1527824212)
+//"48Y 5M 1W 6d 3h 36m 52s "
+
+
+whatTime(1527824212,true)
+//"48Y 5M 1W 6d 3h 36m 52s ago"
+
 ```
 
 
 ## API
 
-### whatTime(input, [options])
+### whatTime(timeNum, isSuffix)
 
-#### input
+#### timeNum
 
-name: | input
+name: | timeNum
 ---------|----------
-Type: | `string`
-Desc: | Lorem ipsum.
+Type: | `number`
+Desc: | time number like Date.now().
 
-#### options
+#### isSuffix
 
-##### foo
-
- name: | foo
+ name: | isSuffix
 ---------|----------
 Type: | `boolean`
 Default: | `false`
-Desc: | Lorem ipsum.
+Desc: | Is add the `ago`/`from now`
 
 
 

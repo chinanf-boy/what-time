@@ -33,6 +33,14 @@ test('3600 time', t => {
 	t.is(m(3600,true), "1h ago")
 });
 
+test('1M 1W 1m 10s', t => {
+	t.is(m(3196870), "1M 1W 1m 10s ")
+});
+
+test('1M 1W 1m 10s time', t => {
+	t.is(m(3196870, true), "1M 1W 1m 10s ago")
+});
+
 test('1527824212 ', t => {
 	t.is(m(1527824212), "48Y 5M 1W 6d 3h 36m 52s ")
 });
