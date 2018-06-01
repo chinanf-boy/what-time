@@ -16,7 +16,18 @@ yarn add what-time
 ```
 
 
+> ⚠️
 
+``` js
+const whatTime = require('what-time');
+
+let s = Date.now() // the number is miniseconds
+// something run
+let e = Date.now()
+
+console.log(whatTime(s-e)) // whatTime is seconds , pleace  /1000
+
+```
 
 ## Usage
 
