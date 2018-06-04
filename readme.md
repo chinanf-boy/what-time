@@ -25,7 +25,7 @@ let s = Date.now() // the number is miniseconds
 // something run
 let e = Date.now()
 
-console.log(whatTime(s-e) / 1000) // whatTime is seconds , pleace  /1000
+console.log(whatTime((s-e) / 1000) // whatTime is seconds , pleace  /1000
 
 ```
 
