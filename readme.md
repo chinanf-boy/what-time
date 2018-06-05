@@ -77,10 +77,14 @@ Type: | `boolean`
 Default: | `false`
 Desc: | Is add the `ago`/`from now`
 
+## contact
+
+- [reverse-what-time](https://github.com/chinanf-boy/reverse-what-time) reverse human time to number
+
 
 ## use by
 
-- [node-modules-size](https://github.com/chinanf-boy/node-modules-size)
+- [node-modules-size](https://github.com/chinanf-boy/node-modules-size) get all node_modules size
 
 
 ## License
